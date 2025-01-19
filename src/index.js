@@ -3,11 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import SideBar from './components/side-bar/side-bar';
+import { Toaster } from 'sonner';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Toaster />
+    <div className='flex h-screen overflow-auto'>
+      <SideBar/>
+      <App />
+    </div>
   </React.StrictMode>
 );
 
